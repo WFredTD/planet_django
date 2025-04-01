@@ -6,3 +6,9 @@ from django.http import HttpResponse # Importando a função HttpResponse, respo
 # função responsável pela página principal
 def index(request):
     return render(request, 'galeria/index.html') # Renderiza o modelo index.html, entrando na pasta galeria e depois na pasta templates
+
+def imagem(request):
+    return render(request, 'galeria/imagem.html')
+
+def contato(request):
+    return render(request, 'galeria/contato.html')

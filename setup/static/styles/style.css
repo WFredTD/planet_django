@@ -101,6 +101,15 @@ table {
     width: 100%;
 }
 
+.formulario{
+    align-items: center;
+    background-color: #041A37;
+    border-radius: 8px;
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+}
+
 .busca__input {
     align-items: center;
     background-color: transparent;
@@ -331,6 +340,11 @@ table {
 .principal {
     display: flex;
     justify-content: space-between;
+}
+
+.principal-contato {
+    display: flex;
+    justify-content: start;
 }
 
 .rodape {
