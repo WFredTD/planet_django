@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'galeria',
+    'galeria.apps.GaleriaConfig', # Adicionando a aplicação galeria. escrevendo desse jeito é uma boa prática, pois se o nome da aplicação mudar, não precisamos mudar aqui
 ]
 
 MIDDLEWARE = [
