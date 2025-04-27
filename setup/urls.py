@@ -16,6 +16,9 @@ Including another URLconf
 from django.contrib import admin # Importando o módulo admin
 from django.urls import path, include # Importando a função include e o módulo path
 from galeria.views import index # Importando a view index da aplicação galeria
+from django.conf import settings # Importando as configurações do Django, para verificar se o DEBUG está ativado ou não
+from django.conf.urls.static import static # Importando a função static, responsável por servir arquivos estáticos durante o desenvolvimento
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),

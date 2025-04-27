@@ -2,11 +2,17 @@
 Para criar um banco usamos o comando no terminal:
     python manage.py migrate
 
+
+
+
 Para criarmor o primeiro usuário temos que fazer pelo terminal também, após o primeiro
 usuário criado, podemos criar outros usuários pelo admin do django
 O comando é o seguinte:
     python manage.py createsuperuser
 O superuser é o usuário administrador do django, ele tem acesso a todas as funcionalidades do admin do django
+
+
+
 
 Usando o shell do django, podemos por exemplo, acrescentar uma imagemno banco, os comandos são os seguintes:
     python manage.py shell
@@ -26,3 +32,5 @@ Tembém existe uma forma de fazer um "update" na tabela, ou seja, alterar os dad
     foto.save()
 
 """
+
+

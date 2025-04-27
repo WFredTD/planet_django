@@ -121,10 +121,13 @@ USE_TZ = True
 STATIC_URL = 'static/'
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'setup/static')
+    os.path.join(BASE_DIR, 'setup/static') # Adicionando o diretório static, que contém os arquivos estáticos da aplicação
 ]
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static') # Diretório onde os arquivos estáticos serão salvos quando o comando collectstatic for executado
+
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media') # Diretório onde as imagens serão salvas
+MEDIA_URL = '/media/' # URL que será utilizada para acessar as imagens
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field

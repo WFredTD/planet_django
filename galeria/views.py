@@ -21,9 +21,10 @@ def index(request):
     #     "legenda":"Planeta fictício do anime Dragon Ball",},
     # }
     # Acima temos dados mockados, ou seja, dados de teste, que não estão no banco de dados, mas são utilizados para testar a aplicação
-
-    fotografias = Fotografias.objects.all()
-    return render(request, 'galeria/index.html', {"cards":fotografias}) # Renderiza o modelo index.html, entrando na pasta galeria e depois na pasta templates
+    #
+    # fotografias = Fotografias.objects.all() # Retorna todas as fotografias do banco de dados, ou seja, todas as fotografias que estão cadastradas no banco de dados
+    fotografia = Fotografias.objects.order_by('-data_fotografia').filter(publicada=True) # Retorna todas as fotografias do banco de dados, ordenadas pela data da fotografia, ou seja, as fotografias mais recentes aparecem primeiro, e filtra as fotografias que estão publicadas, ou seja, que estão visíveis para o público
+    return render(request, 'galeria/index.html', {"cards":fotografia}) # Renderiza o modelo index.html, entrando na pasta galeria e depois na pasta templates
 
 def imagem(request, foto_id):
     fotografia = get_object_or_404(Fotografias, pk=foto_id) # get_object_or_404 é uma função que retorna um objeto ou 404 caso não encontre o objeto, pk é a chave primária do objeto

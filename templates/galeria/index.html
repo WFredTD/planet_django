@@ -25,6 +25,7 @@
                         <li class="tags__tag">Estrela</li>
                         <li class="tags__tag">Galáxia</li>
                         <li class="tags__tag">Planeta</li>
+                        <li class="tags__tag">Todos</li>
                     </ul>
                 </section>
                 <section class="galeria">
@@ -39,7 +40,7 @@
                                     <a href="{% url 'imagem' fotografias.id %}">
                                         <img class="card__imagem" src="{% static '/assets/imagens/galeria/' %}{{fotografias.foto}}" alt="foto">
                                     </a>
-                                    <span class="card__tag">Estrelas</span>
+                                    <span class="card__tag">{{fotografias.categoria}}</span>
                                     <div class="card__info">
                                         <p class="card__titulo">{{fotografias.nome}}</p>
                                         <div class="card__texto">
