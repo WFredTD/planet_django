@@ -5,8 +5,13 @@
         <img src="{% static '/assets/logo/planet.png'%}" alt="Logo da Planet" />
         <div class="cabecalho__busca">
             <div class="busca__fundo">
-                <input class="busca__input" type="text" placeholder="O que você procura?">
-                <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %}" alt="ícone de search">
+
+                <form method="GET" action="{% url 'buscar' %}" class="formulario">
+                    <input class="busca__input" type="text" name="search" placeholder="O que você procura?">
+                    <button class="busca__botao" type="submit">
+                        <img class="busca__icone" src="{% static '/assets/ícones/1x/search.png' %}" alt="ícone de search">
+                    </button>
+                </form>
             </div>
         </div>
     </header>

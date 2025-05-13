@@ -6,7 +6,7 @@ class FotografiasAdmin(admin.ModelAdmin):
     list_display_links = ('nome',"legenda") # Campos que serão pesquisáveis no admin
     search_fields = ('nome',) # Campos que serão pesquisáveis no admin
     list_filter = ('categoria',) # Campos que serão filtráveis no admin
-    list_per_page = 3 # Número de itens por página no admin
+    list_per_page = 4 # Número de itens por página no admin
     list_editable = ('publicada',) # Campos que podem ser editados diretamente na tabela do admin
 
 
