@@ -1,0 +1,40 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+        <main class="principal-contato">
+
+            {% include 'galeria/partials/_menu.html' %}
+            
+            <section>
+                <form class="formularioContato" action="#" method="post" enctype="multipart/form-data">
+                    <div class="input-row">
+                        <label>
+                            <span><i class="icon icon-user-1"></i> Nome completo</span>
+                            <input type="text" class="form-input" name="nome_cadastro" placeholder="Ex.: João Silva" required>
+                        </label>
+                        <label>
+                            <span><i class="icon icon-email"></i> E-mail</span>
+                            <input type="email" class="form-input" name="email-cadastro" placeholder="Ex.: joaosilva@xpto.com" required>
+                        </label>
+                        <label>
+                            <span><i class="icon icon-flag"></i> Senha</span>
+                            <input type="password" class="form-input" name="password1" placeholder="Digite sua senha" required>
+                        </label>
+                        <label>
+                            <span><i class="icon icon-flag"></i> Confirmação de senha</span>
+                            <input type="password" class="form-input" name="password2" placeholder="Digite sua senha mais uma vez" required>
+                        </label>
+                    </div>
+
+                    <input type="hidden" name="acao" value="enviar" />
+                    <button class="btn-envia" title="Enviar" type="submit"><b> Criar conta</b></button>
+                
+                </form>
+            </section>
+
+{% endblock %}

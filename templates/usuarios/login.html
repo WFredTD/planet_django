@@ -1,0 +1,40 @@
+{% extends 'galeria/base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+
+
+        <main class="principal-contato">
+
+            {% include 'galeria/partials/_menu.html' %}
+            
+            <section>
+                <form class="formularioContato" action="#" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="input-row">
+                        {% for field in form.visible_fields %}
+                            <div>
+                                <label for="{{filed.id_for_labels}}"> {{field.label}}</label>
+                                {{field}}
+                            </div>
+                        {% endfor %}
+                        <!-- <label>
+                            <span><i class="icon icon-user-1"></i> Email</span>
+                            <input type="email" class="form-input" name="email_login" placeholder="Ex.: joaosilva@xpto.com" required>
+                        </label>
+                        <label>
+                            <span><i class="icon icon-flag"></i> Senha</span>
+                            <input type="password" class="form-input" name="password" placeholder="Digite sua senha" required>
+                        </label> -->
+                    </div>
+
+                    <input type="hidden" name="acao" value="enviar" />
+                    <button class="btn-envia" title="Enviar" type="submit"><b> Login</b></button>
+                
+                </form>
+            </section>
+
+{% endblock %}
+

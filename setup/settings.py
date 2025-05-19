@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'galeria.apps.GaleriaConfig', # Adicionando a aplicação galeria. escrevendo desse jeito é uma boa prática, pois se o nome da aplicação mudar, não precisamos mudar aqui
+    'usuarios.apps.UsuariosConfig', # Adicionando a aplicação usuarios
 ]
 
 MIDDLEWARE = [

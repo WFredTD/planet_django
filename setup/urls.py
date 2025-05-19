@@ -23,6 +23,7 @@ from django.conf.urls.static import static # Importando a função static, respo
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('galeria.urls')), # Incluindo as urls da aplicação galeria
+    path('', include('usuarios.urls')),
 ]
 # Abaixo temos a configuração para servir arquivos estáticos durante o desenvolvimento, ou seja, quando o DEBUG estiver ativado, ou seja, quando estivermos em modo de desenvolvimento
 if settings.DEBUG:
